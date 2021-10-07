@@ -1,0 +1,76 @@
+
+.footer_container{
+    /* position: fixed; */
+    text-align: center;
+    min-height: 17vh;
+    bottom: 0;
+    /* background-color: #000; */
+    /* margin: auto; */
+    background-color: rgb(110, 107, 107);
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    border-top: 1px solid rgb(87, 84, 84);
+    box-shadow: 1px 1px 2px gray;
+    font-size: 0.5rem;
+    border: none;
+    margin-top: auto;
+    color:#fff;
+    /* z-index: -1; */
+}
+
+.footer_container h1{
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(250, 245, 245);
+    margin: 0.5rem;
+}
+
+.footer_container p{
+    font-size: 0.7rem;
+    color: rgb(245, 243, 243);
+    margin: 0.3rem;
+}
+
+@media screen and (max-width :400px){
+    .footer_container{
+        padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+        font-size: 0.3rem;
+        border: none;
+    }
+    .footer_container h1{
+        font-size: 0.4rem;
+    }
+    .footer_container p{
+        font-size: 0.3rem;
+        margin: 0.1rem;
+    }
+}
+
+@media screen and (min-width : 400px) and (max-width : 500px){
+     .footer_container{
+        padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+        font-size: 0.3rem;
+        border: none;
+    }
+    .footer_container h1{
+        font-size: 0.5rem;
+    }
+    .footer_container p{
+        font-size: 0.4rem;
+        margin: 0.2rem;
+    }
+}
+
+@media screen and (min-width : 500px) and (max-width :700px){
+    .footer_container{
+        padding: 0.4rem 0.6rem 0.4rem 0.4rem;
+        font-size: 0.4rem;
+        border: none;
+    }
+    .footer_container h1{
+        font-size: 0.6rem;
+    }
+    .footer_container p{
+        font-size: 0.5rem;
+        margin: 0.3rem;
+    }
+}

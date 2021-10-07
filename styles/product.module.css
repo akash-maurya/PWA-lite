@@ -1,0 +1,228 @@
+.card_container{
+    height: 35vh;
+    width: 18vw;
+    margin: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(145, 142, 142);
+}
+
+.card_image{
+    position: relative;
+    height: 16vh ;
+    width: 18vw;
+    border-bottom: 1px solid black;
+}
+
+.text_container{
+    min-height: 20vh;
+    width: 18vw ;
+    color: black;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background: black; */
+    flex-direction: column;
+}
+
+.text_container h2{
+    color: rgb(12, 11, 11);
+    font-size: 1.3rem;
+    margin: 0.5rem;
+    /* color:rgb(15, 15, 15); */
+}
+
+.text_container p{
+    font-size: 0.9rem;
+    margin: 0.5rem;
+}
+
+.priceAndbutton{
+    position: relative;
+    bottom: 0%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.price{
+    color: red;
+    margin: auto;
+}
+.button{
+    height: 3.5vh;
+    width: 5vw;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 4rem;
+    border: 1px solid red;
+    background: white;
+    color: red;
+}
+
+.priceAndbutton button:hover{
+    color: white;
+    background-color: red;
+}
+
+@media screen and (max-width : 540px) {
+    .card_container{
+    height: 36vh;
+    width: 42vw;
+    margin: 0.8rem;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px rgb(145, 142, 142);
+}
+  .card_image{
+    position: relative;
+    height: 16vh ;
+    width: 42vw;
+    border-bottom: 1px solid black;
+}
+
+.text_container{
+    min-height: 20vh;
+    width: 42vw ;
+    color: black;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background: black; */
+    flex-direction: column;
+}
+
+
+.text_container h2{
+    color: rgb(12, 11, 11);
+    font-size: 0.8rem;
+    margin: 0.2rem;
+    /* color:rgb(15, 15, 15); */
+}
+
+.text_container p{
+    font-size: 0.6rem;
+    margin: 0.2rem;
+}
+.priceAndbutton{
+    /* position: relative; */
+    bottom: 0%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+}
+.price{
+    color : green;
+    /* margin: auto; */
+    /* margin-left: 0; */
+    font-size: 0.65em;
+}
+.button{
+    height: 3.5vh;
+    width: 35vw;
+    /* border-radius: 5px; */
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.5rem;
+    margin-top: 0.5rem;
+     margin-left: 0;
+    border: 1px solid red;
+    background: white;
+    color: red;
+}
+
+
+}
+
+@media screen and (min-width : 550px ) and (max-width:1100px) {
+    .card_container{
+    height: 38vh;
+    width: 28vw;
+    margin: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(145, 142, 142);
+  }
+  .card_image{
+    position: relative;
+    height: 16vh ;
+    width: 28vw;
+    border-bottom: 1px solid black;
+}
+
+
+.text_container{
+    min-height: 22vh;
+    width: 27vw ;
+    color: black;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background: black; */
+    flex-direction: column;
+}
+
+.text_container h2{
+    color: rgb(12, 11, 11);
+    font-size: 1.3rem;
+    margin: 0.5rem;
+    /* color:rgb(15, 15, 15); */
+}
+
+.text_container p{
+    font-size: 0.9rem;
+    margin: 0.5rem;
+}
+.priceAndbutton{
+    /* position: relative; */
+    bottom: 0%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.price{
+    color : green;
+    /* margin: auto; */
+    /* margin-left: 0; */
+    font-size: 0.65em;
+}
+.button{
+    height: 3.5vh;
+    width: 23vw;
+    /* border-radius: 5px; */
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.5rem;
+    margin-top: 0.5rem;
+     margin-left: 0;
+    border: 1px solid red;
+    background: white;
+    color: red;
+}
+
+
+}
+
+@media screen and (min-width : 1001px) and(max-width:1200px) {
+   .text_container h2{
+       font-size: 1.5rem;
+   }
+   .text_container p{
+       font-size: 1.4rem;
+   }
+   .price{
+       font-size: 1.5rem;
+       
+   }
+   .button{
+       font-size:  1.4rem;
+   }
+
+
+}

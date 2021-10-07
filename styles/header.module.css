@@ -1,0 +1,337 @@
+
+.container{
+    position:fixed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.navbar{
+    width: 100%;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 40px 10px 40px;
+    flex-wrap: wrap;
+    height: 10vh;
+    /* position: relative; */
+}
+
+/* .nav_image{
+    
+    width: 34vw;
+    height: 10vh;
+} */
+.circlebutton{
+   border-radius: 50%;
+}
+
+.search_box{
+    margin: auto;
+    width: 34vw;
+    height:6vh ;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.heading{
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(224, 30, 30);
+    margin: 8px 1px 2px 1px;
+}
+/* .blue{
+    text-align: center;
+    color: blue;
+}*/
+.green{
+    text-align: center;
+    color: rgb(214, 57, 46);
+} 
+.search_box input {
+    font-size: 1.2rem;
+     padding: 10px;
+     width: 32vw   ;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    /* cursor: pointer; */
+    /* text-align: center; */
+}
+ 
+div.search_box:hover{
+    box-shadow: 2px 2px 5px rgb(116, 113, 113);
+}
+
+.btn{
+    margin: 10px;
+    padding: 8px;
+    width: 7vw;
+    height: 5vh;
+    border-radius: 5px;
+    color: red;
+    border: 1px solid red;
+    font-size: 1.2rem;
+}
+.icon{
+    width: 3vw;
+    height: 6.2vh;
+    background: rgb(121, 119, 119);
+    size: 10px;
+    border-radius: 0 8px 8px 0;
+}
+.icon:hover{
+    cursor: pointer;
+}
+
+button.btn:hover{
+        background-color: red;
+        color: white;
+        cursor: pointer;
+}
+@media screen and (max-width : 350px) {
+    .carticon{
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 550px)  {
+
+.navbar{
+    width: 100vw;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* margin-right: 0; */
+    /* padding: 0; */
+    /* padding: 10px 40px 10px 40px; */
+    flex-wrap: wrap;
+    height: 10vh;
+    /* position: relative; */
+}
+.heading{
+    display: none;
+}
+.icon{
+    width: 10vw;
+    height: 5vh;
+    background: rgb(121, 119, 119);
+    /* padding: auto; */
+    /* text-align: center; */
+    /* margin: auto; */
+    border: none;
+    outline: none;
+    border-radius: 0 4px  4px 0;
+    /* padding: 2px 2px 2px 2px; */
+}
+
+.search_box{
+    margin: auto;
+     margin-left: 10px;
+   /* margin-right: 8px; */
+    /* margin: 0; */
+    width: 45vw;
+    height:5vh ;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+}
+.search_box input {
+    font-size: 0.8rem;
+     padding: 10px;
+     width: 35vw   ;
+     height: 5vh;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* text-align: center; */
+}
+ 
+div.search_box:hover{
+    box-shadow: 2px 2px 5px rgb(116, 113, 113);
+}
+
+.btn{
+    /* display: flex; */
+    margin: 5px;
+    padding: 8px;
+    width: 18vw;
+    height: 5vh;
+    border-radius: 5px;
+    color: red;
+    border: 1px solid red;
+    font-size: 0.8rem;
+}
+
+}
+
+
+
+@media screen and (min-width : 550px) and (max-width:700px) {
+    .navbar{
+    width: 100vw;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* margin-right: 0; */
+    /* padding: 0; */
+    /* padding: 10px 40px 10px 40px; */
+    flex-wrap: wrap;
+    height: 10vh;
+    /* position: relative; */
+}
+.heading{
+    display: none;
+}
+.icon{
+    width: 10vw;
+    height: 5vh;
+    background: rgb(121, 119, 119);
+    /* padding: auto; */
+    /* text-align: center; */
+    /* margin: auto; */
+    border: none;
+    outline: none;
+    border-radius: 0 4px  4px 0;
+    /* padding: 2px 2px 2px 2px; */
+}
+
+.search_box{
+    margin: auto;
+     margin-left: 10px;
+   /* margin-right: 8px; */
+    /* margin: 0; */
+    width: 45vw;
+    height:5vh ;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+}
+.search_box input {
+    font-size: 0.8rem;
+     padding: 10px;
+     width: 35vw   ;
+     height: 5vh;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* text-align: center; */
+}
+ 
+div.search_box:hover{
+    box-shadow: 2px 2px 5px rgb(116, 113, 113);
+}
+
+.btn{
+    margin: 7px;
+    padding: 8px;
+    width: 16vw;
+    height: 5vh;
+    border-radius: 5px;
+    color: red;
+    border: 1px solid red;
+    font-size: 0.8rem;
+}
+
+}
+
+/* For ipad and Ipad pro */
+@media screen and (min-width : 700px) and (max-width:1100px) {
+    
+.navbar{
+    width: 100vw;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* margin-right: 0; */
+    /* padding: 0; */
+    /* padding: 10px 40px 10px 40px; */
+    flex-wrap: wrap;
+    height: 10vh;
+    /* position: relative; */
+}
+.heading{
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(224, 30, 30);
+    /* margin: 5px 1px 2px 1px; */
+    margin: 5px;
+    /* margin-left: 4px; */
+}
+.icon{
+    width: 8vw;
+    height: 4vh;
+    background: rgb(121, 119, 119);
+    /* padding: auto; */
+    /* text-align: center; */
+    /* margin: auto; */
+    border: none;
+    outline: none;
+    border-radius: 0 4px  4px 0;
+    /* padding: 2px 2px 2px 2px; */
+}
+
+.search_box{
+    margin: auto;
+     /* margin-left: 10px; */
+   /* margin-right: 8px; */
+    /* margin: 0; */
+    width: 45vw;
+    height:4vh ;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+}
+.search_box input {
+    font-size: 0.8rem;
+     padding: 10px;
+     width: 38vw   ;
+     height: 4vh;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* text-align: center; */
+}
+ 
+div.search_box:hover{
+    box-shadow: 2px 2px 5px rgb(116, 113, 113);
+}
+
+.btn{
+    margin: 7px;
+    padding: 8px;
+    width: 13vw;
+    height: 3.5vh;
+    border-radius: 5px;
+    color: red;
+    border: 1px solid red;
+    font-size: 1rem;
+}
+
+button.btn:hover{
+        background-color: red;
+        color: white;
+        cursor: pointer;
+ }
+}

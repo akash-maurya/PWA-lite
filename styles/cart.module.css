@@ -1,0 +1,236 @@
+
+.header{
+    margin: 1.5rem;
+    width: 98vw;
+    height: 10vh;
+    box-shadow: 2px 2px 5px rgb(88, 87, 87);
+   
+    display: inline-block;
+}
+.header p{
+    font-size: 1.5rem;
+    margin: auto;
+    font-weight: bold;
+    margin: auto;
+    margin-top: auto;
+    text-align: center;
+    color: red;
+}
+
+.product_container{
+   width: 50vw;
+   height: 10vh;
+   margin: 2rem;
+   box-shadow: 2px 2px 5px rgb(122, 120, 120);
+   display: flex;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}
+
+.product_container h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: auto;
+}
+.product_container p{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: auto;
+}
+.product_container span{
+    color: rgb(12, 43, 129);
+}
+.item_container{
+    width: 60vw;
+    margin: auto;
+}
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    background-color: rgb(178, 186, 212);
+
+}
+.button{
+    /* position: absolute; */
+    margin-top: 4rem;
+    right: 0;
+    /* margin-left: 90vw; */
+    height: 5vh;
+    width: 10vw;
+    border-radius: 5px;
+    background-color: slategray;
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    border:none;
+    /* box-shadow: 1px 2px 5px rgb(11, 11, 212); */
+}
+/* .pricingAndcount{
+    margin: 1.5rem;
+    width: 98vw;
+    height: 5rem;
+    box-shadow: 2px 2px 5px rgb(88, 87, 87);
+    /* display: flex; */
+    /* justify-content:center;
+    align-items: center;
+} */ 
+.countAndPricing {
+  margin: 1.5rem;
+}
+.countAndPricing p{
+    font-size: 1.5rem;
+    font-weight:lighter;
+}
+.count{
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    background-color: rgb(116, 116, 209);
+    color: white;
+}
+.pricing span{
+    color:rgb(224, 18, 18) ;
+    font-weight: 500;
+}
+.home{
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    /* margin-top: 4rem;
+    width: 5vw;
+    height: 5vh;
+    border: 1px solid black; */
+}
+
+@media screen and (max-width : 550px) {
+    
+.header p{
+    font-size: 0.8rem;
+    margin: auto;
+    font-weight: bold;
+    margin: 1rem;
+  
+    text-align: center;
+    color: red;
+}
+.home{
+    position: relative;
+    text-decoration: none;
+    font-size: 1rem;
+     margin: 1.8rem ;
+ }
+ .button{
+    /* position: absolute; */
+    /* margin-top: 0rem; */
+    /* right: 0; */
+    margin-left: 0;
+    margin-top: 1.4rem;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 5px;
+    background-color: slategray;
+    font-size: 0.8rem;
+    color: white;
+    cursor: pointer;
+    border:none;
+    /* box-shadow: 1px 2px 5px rgb(11, 11, 212); */
+}
+.countAndPricing p{
+    font-size: 0.9rem;
+    font-weight:lighter;
+}
+
+.item_container{
+    width: 80vw;
+    margin: auto;
+}
+
+.product_container{
+   width: 70vw;
+   height: 10vh;
+   margin: 2rem;
+   box-shadow: 2px 2px 5px rgb(122, 120, 120);
+   display: flex;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}
+
+.product_container h2{
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: auto;
+}
+.product_container p{
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: auto;
+}
+}
+
+@media screen  and (min-width : 550px ) and (max-width : 1000px){
+  
+.header p{
+    font-size: 1.4rem;
+    margin: auto;
+    font-weight: bold;
+    margin: 1rem;
+  
+    text-align: center;
+    color: red;
+}
+.home{
+    position: relative;
+    text-decoration: none;
+    font-size: 1.5rem;
+     margin: 1.8rem ;
+ }
+ .button{
+    /* position: absolute; */
+    /* margin-top: 0rem; */
+    /* right: 0; */
+    margin-left: 0;
+    margin-top: 2rem;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 5px;
+    background-color: slategray;
+    font-size: 0.8rem;
+    color: white;
+    cursor: pointer;
+    border:none;
+    /* box-shadow: 1px 2px 5px rgb(11, 11, 212); */
+}
+.countAndPricing p{
+    font-size: 1.4rem;
+    font-weight:lighter;
+}
+
+.item_container{
+    width: 80vw;
+    margin: auto;
+}
+
+.product_container{
+   width: 70vw;
+   height: 10vh;
+   margin: 2rem;
+   box-shadow: 2px 2px 5px rgb(122, 120, 120);
+   display: flex;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}
+
+.product_container h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: auto;
+}
+.product_container p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: auto;
+}
+
+}
