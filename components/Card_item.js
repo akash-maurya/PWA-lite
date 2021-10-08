@@ -11,9 +11,10 @@ const CardItem = (props)=>{
 const cookies = new Cookies();
 
 const addItem = async (event)=>{
-    event.preventDefault();
-    const authToken = cookies.get('authToken');
-    const header = {
+    //  props.triggerPopup(event);
+     event.preventDefault();
+     const authToken = cookies.get('authToken');
+     const header = {
       "Content-Type": "application/json",
        "authToken" : authToken,
     };
@@ -25,7 +26,7 @@ const addItem = async (event)=>{
        await axios.post(addUrl , data  , {headers : header})
         .then((res)=>{
             console.log(res.data);
-            
+             props.triggerPopup(event);
         })
         .catch((error)=>{
           console.log(error);

@@ -1,13 +1,14 @@
 
 .container{
-    position:fixed;
-  margin: 0;
+ position: relative;
+  margin: 2rem;
   padding: 0;
   box-sizing: border-box;
   width: 100%;
 }
 
 .navbar{
+    position: sticky ;
     width: 100%;
     background-color: #222222;
     display: flex;
@@ -15,6 +16,7 @@
     padding: 10px 40px 10px 40px;
     flex-wrap: wrap;
     height: 10vh;
+    z-index: 10;
     /* position: relative; */
 }
 

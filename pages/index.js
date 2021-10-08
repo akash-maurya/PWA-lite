@@ -6,10 +6,24 @@ import items from '../components/items';
 import Head from 'next/head';
 import Login from './login';
 import Footer from '../components/footer';
-// import React , {useState} from 'react';
+import React , {useState} from 'react';
+import AddPop from '../components/addpopup';
 
 const  Home = () =>{
 
+ const [showPopup , setPopup] = useState(false);
+
+ const handSetPopup = (event)=>{
+    event.preventDefault();
+    setPopup((prevVal)=>{
+      return !prevVal;
+    });
+    setTimeout( ()=>{
+      setPopup((prevVal)=>{
+        return!prevVal;
+      })
+    },500);
+ }
  
 
   return (
@@ -19,12 +33,14 @@ const  Home = () =>{
       </Head>
 
       <Header />
-
+    
+      {showPopup && <AddPop></AddPop>}
   
       <div className={style.grid_container}>
         {items.map((item) => {
           return (
             <CardItem
+              triggerPopup= {handSetPopup}
               key={item.id}
               title={item.title}
               description={item.description}
@@ -34,19 +50,7 @@ const  Home = () =>{
           );
         })}
       </div>
-      {/* <div className={style.container}>
-        <div className={style.layer}>
-          <h1 className={style.heading}>Welcome to licious lite</h1>
-          <div className={style.routes}>
-            <Link href="/login">
-                <button className = {style.link}> Sign in</button>
-            </Link>
-            <Link href="/register">
-                <button className = {style.link}>Sign Up</button>
-            </Link>
-          </div>
-        </div>
-      </div> */}
+     
       <Footer/>
     </div>
   );

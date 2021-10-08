@@ -4,10 +4,10 @@ import Cookies from "universal-cookie";
 import axios from "axios";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTrash} from "@fortawesome/free-solid-svg-icons";
 import React , {useState , useEffect} from 'react';
 import Link from 'next/link';
-import getcartItems from '../api/cartitems';
+// import getcartItems from '../api/cartitems';
 
 const Cart = (props)=>{
     
@@ -16,8 +16,10 @@ const Cart = (props)=>{
   const [items ,setItems] = useState([]);
   const [cost , settotalCost] = useState(0);
   const [numberOfitem ,setNumItems] = useState(0);
+
+
 async function getcartItems() {
-  const cookies = new Cookies();
+  // const cookies = new Cookies();
 
   const authToken = cookies.get("authToken");
   const header = {
@@ -41,7 +43,9 @@ async function getcartItems() {
         settotalCost(count);
         setNumItems(data.length);
       })
-      .catch((err) => {});
+      .catch((err) => {
+        console.log(err);
+      });
   }
  
 }
@@ -50,9 +54,11 @@ useEffect(() => {
  
 }, [])
 
- // Item layout funtion
+
+
 const Product = (props)=>{
 
+ 
           return (
             <>
               <div className={style.product_container}>
@@ -60,45 +66,56 @@ const Product = (props)=>{
                   <span>Item</span> : {props.name}
                 </h2>
                 <p>
-                  <span>Amount </span>: {props.amount}
+                  <span>Amount </span>: {props.amount}Rs
                 </p>
+               
               </div>
             </>
           );
 }
 
+//------------------------------ Cart JSX ---------------------------------
   return (
     <>
-       <div className = {style.header}>
-            <Link  href = "/">
-            <a className = {style.home}>Go back </a>
-            </Link>
-             <p> Your items are here ... Continue Shopping</p>
-             <Link href = '/checkout'><button className = {style.button}>Checkout</button></Link>
-            
-       </div>
+      <div className={style.header}>
+        <Link href="/">
+          <a className={style.home}>
+         Go back
+          </a>
+        </Link>
+        <p> Your items are here ... Continue Shopping</p>
+        <Link href="/checkout">
+          <button className={style.button}>Checkout</button>
+        </Link>
+      </div>
 
+      <div className={style.countAndPricing}>
+        <p>
+          Total Items in your cart{" "}
+          <button className={style.count}>{numberOfitem}</button>
+        </p>
+        <div className={style.pricing}>
+          <p>
+            Total Amount is <span>{cost}Rs</span>
+          </p>
+        </div>
+      </div>
 
-       <div className = {style.countAndPricing}>
-         <p>Total Items in your cart <button className = {style.count}>{numberOfitem}</button></p>
-         <div className = {style.pricing}>
-            <p>Total Amount is <span>{cost} Rs</span></p>
-         </div>
-       </div>
-
-
-
-       <div className = {style.pricingAndcount}>
-
-       </div>
-       <div className = {style.item_container}>
-            {items.map((item)=>{
-              return <Product  key = {item._id} name = {item.name}  amount = {item.amount}/>
-            })}
-       </div>
-       
+      <div className={style.pricingAndcount}></div>
+      <div className={style.item_container}>
+        {items.map((item) => {
+          return (
+            <Product
+              key={item._id}
+              itemId={item._id}
+              name={item.name}
+              amount={item.amount}
+            />
+          );
+        })}
+      </div>
     </>
-  )
+  );
 }
 
 export default Cart ;
