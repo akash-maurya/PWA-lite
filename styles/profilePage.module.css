@@ -1,0 +1,19 @@
+.profilepic {
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.submitbtn {
+  color: #fff;
+  background-color: #e41d36;
+}
+.submitbtn:hover {
+  color: #fff;
+}
+
+.imgbox {
+  background-color: #f8f8f8;
+}

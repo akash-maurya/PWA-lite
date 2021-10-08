@@ -109,7 +109,7 @@ const login = (props) => {
       cookies.set('authToken' , response.data.AuthToken ,  {sameSite : 'Strict' ,path : '/' , expires : new Date(new Date().getTime() + 3600*24*180)}  );
       setTimeout(()=>{
           props.toggleLogin(event);
-      }, 2000);
+      }, 500);
     }
   }
 

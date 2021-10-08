@@ -66,7 +66,7 @@ const Product = (props)=>{
                   <span>Item</span> : {props.name}
                 </h2>
                 <p>
-                  <span>Amount </span>: {props.amount}Rs
+                  <span>Amount </span>: {props.amount}       Rs
                 </p>
                
               </div>
