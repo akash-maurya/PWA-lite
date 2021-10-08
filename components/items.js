@@ -5,7 +5,7 @@ import Eggs from '../public/Eggs.jpeg';
 const items = [
   {
     id: 1,
-    title: "Meat ",
+    title: "Meat Masala",
     description:
       "It is very hygenic and tasty meat jksfsjhafsdh fjdsfjhfsadhfsdjk ffhf safdsf hsfsdhaf ",
     price: 199,
@@ -32,7 +32,7 @@ const items = [
     title: "Chicken Curry",
     description:
       "It is very hygenic and bonless breast vsdhfsdf s w gfdhhsdbfhsdfjsdfjhsdjbfs",
-    price: 399,
+    price: 254,
     image:
       "https://images.unsplash.com/photo-1606843046080-45bf7a23c39f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
   },
@@ -41,7 +41,7 @@ const items = [
     title: "Fish Food",
     description:
       "It is very hygenic and bonless breast vsdhfsdf s w gfdhhsdbfhsdfjsdfjhsdjbfs",
-    price: 449,
+    price: 254,
     image:
       "https://images.unsplash.com/photo-1600699899970-b1c9fadd8f9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
   },
@@ -50,7 +50,7 @@ const items = [
     title: "Lamb Mince",
     description:
       "It is very hygenic and bonless breast vsdhfsdf s w gfdhhsdbfhsdfjsdfjhsdjbfs",
-    price: 345,
+    price: 254,
     image:
       "https://media.istockphoto.com/photos/raw-fresh-lamb-ribs-picture-id530570971?s=612x612",
   },
@@ -59,7 +59,7 @@ const items = [
     title: "Mutton Brain",
     description:
       "It is very hygenic and bonless breast vsdhfsdf s w gfdhhsdbfhsdfjsdfjhsdjbfs",
-    price: 550,
+    price: 254,
     image:
       "https://media.istockphoto.com/photos/pink-brain-before-cooking-on-black-metal-frying-pan-raw-meat-offal-picture-id1049942546?s=612x612",
   },
@@ -68,7 +68,7 @@ const items = [
     title: "Egg Brown",
     description:
       "It is very hygenic and bonless breast vsdhfsdf s w gfdhhsdbfhsdfjsdfjhsdjbfs",
-    price: 351,
+    price: 254,
     image:
       "https://media.istockphoto.com/photos/bowl-full-of-brown-eggs-picture-id478324316?s=612x612",
   },

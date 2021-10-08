@@ -83,7 +83,7 @@ useEffect(() => {
 
             {/* Profile Button which will be visible if user logged in */}
             {CheckLogin && (
-              <Link href="/profilePage">
+              <Link href="/profile">
                 <button className={style.btn}>
                   <span>Profile</span>
                 </button>

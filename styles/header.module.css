@@ -10,7 +10,7 @@
 .navbar{
     position: sticky ;
     width: 100%;
-    background-color: #f74343;
+    background-color: #222222;
     display: flex;
     flex-direction: row;
     padding: 10px 40px 10px 40px;
@@ -42,7 +42,7 @@
 .heading{
     font-size: 2rem;
     text-align: center;
-    color: rgb(226, 224, 224);
+    color: rgb(224, 30, 30);
     margin: 8px 1px 2px 1px;
 }
 /* .blue{
@@ -51,7 +51,7 @@
 }*/
 .green{
     text-align: center;
-    color: rgb(247, 241, 241);
+    color: rgb(214, 57, 46);
 } 
 .search_box input {
     font-size: 1.2rem;
@@ -75,8 +75,8 @@ div.search_box:hover{
     height: 5vh;
     border-radius: 5px;
     color: red;
-    border: 1px solid rgb(243, 240, 240);
-    font-size: 1.4rem;
+    border: 1px solid red;
+    font-size: 1.2rem;
 }
 .icon{
     width: 3vw;
@@ -90,8 +90,8 @@ div.search_box:hover{
 }
 
 button.btn:hover{
-        background-color: rgb(231, 226, 226);
-        color: rgb(202, 10, 10);
+        background-color: red;
+        color: white;
         cursor: pointer;
 }
 @media screen and (max-width : 350px) {
