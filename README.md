@@ -1,8 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## PWA LITE
+This is a [PWA](https://developers.google.com/web/updates/2015/12/getting-started-pwa)  project  built using [Next.js](https://nextjs.org/) for frontend and [Node.js](https://nodejs.org) for backend.
 
 ## Getting Started
 
-First, run the development server:
+
 
 ```bash
 npm run dev
