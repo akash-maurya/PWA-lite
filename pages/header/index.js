@@ -8,7 +8,7 @@ import Login from "../login";
 import React , {useState, useEffect} from 'react';
 import Cart from '../cart';
 import Cookies from "universal-cookie";
-
+import fallback from "../../components/fallback";
 
 
 
@@ -17,6 +17,7 @@ const Product = (props) => {
 const [showlogin , setLogin] = useState(false);
 const [CheckLogin , setCheckLogin]  = useState(false);
 const [showCart , setShowCart] = useState(false);
+const [showfallback , setfallback] = useState(false);
 const cookies = new Cookies();
 // check whether someone login or not ;
 
@@ -42,6 +43,11 @@ const handleclick = (event)=>{
    setLogin((prevVal)=>{
      return !prevVal ;
    })
+   
+}
+
+const handlefallback =()=>{
+  setfallback (true);
 }
 
 useEffect(() => {
@@ -95,7 +101,7 @@ useEffect(() => {
               <button className = {style.btn}><span>Cart</span></button>
             </Link>
           </div>
-          {showlogin && <Login toggleLogin={handleclick}></Login>}
+          {showlogin && <Login fallback_check = {handlefallback} toggleLogin={handleclick}></Login>}
 
           {showCart && <Cart togglebar={toggleCart}></Cart>}
         </nav>

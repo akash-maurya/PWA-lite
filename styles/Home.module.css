@@ -47,6 +47,9 @@
 }
 
 .grid_container{
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 7rem;
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-column-gap: 3px;

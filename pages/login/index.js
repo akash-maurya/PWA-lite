@@ -71,11 +71,12 @@ const login = (props) => {
            
            if(!res || res.data.success === false){
                setOTPbox(false);
-              setNetworkError(true);
+               setNetworkError(true);
 
             }
           else
           {
+            props.fallback_handle();
             setNetworkError(false);
              setOTPbox(true);
              setInvalid(false);

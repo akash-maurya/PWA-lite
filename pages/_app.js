@@ -8,8 +8,8 @@ config.autoAddCss = false;
 function MyApp({ Component, pageProps }) {
 
    useEffect(() => {
-     console.log("helo");
-     if ("serviceWorker" in navigator) {
+     console.log("hello");
+     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
         .then(()=>{
           console.log("service worker are registered!!");
@@ -24,6 +24,8 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="manifest" href="/manifest.json" />
+        <script src = "/idb.js"></script>
+        <script src = "/utility.js"></script>
       </Head>
       <Component {...pageProps} />
     </>

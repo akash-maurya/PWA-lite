@@ -1,6 +1,6 @@
 
 .container{
- position: relative;
+  position: relative;
   margin: 2rem;
   padding: 0;
   box-sizing: border-box;
@@ -10,7 +10,7 @@
 .navbar{
     position: sticky ;
     width: 100%;
-    background-color: #222222;
+    background-color: #db4141;
     display: flex;
     flex-direction: row;
     padding: 10px 40px 10px 40px;
@@ -42,7 +42,7 @@
 .heading{
     font-size: 2rem;
     text-align: center;
-    color: rgb(224, 30, 30);
+    color: rgb(230, 224, 224);
     margin: 8px 1px 2px 1px;
 }
 /* .blue{
@@ -51,7 +51,7 @@
 }*/
 .green{
     text-align: center;
-    color: rgb(214, 57, 46);
+    color: rgb(245, 237, 236);
 } 
 .search_box input {
     font-size: 1.2rem;
@@ -90,8 +90,8 @@ div.search_box:hover{
 }
 
 button.btn:hover{
-        background-color: red;
-        color: white;
+            /* background-color: red;
+            color: white; */
         cursor: pointer;
 }
 @media screen and (max-width : 350px) {
@@ -104,7 +104,7 @@ button.btn:hover{
 
 .navbar{
     width: 100vw;
-    background-color: #222222;
+    background-color: #db4141;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -181,16 +181,13 @@ div.search_box:hover{
 @media screen and (min-width : 550px) and (max-width:700px) {
     .navbar{
     width: 100vw;
-    background-color: #222222;
+    background-color: #db4141;
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: 0;
     align-items: center;
-    /* justify-content: space-between; */
-    /* margin-right: 0; */
-    /* padding: 0; */
-    /* padding: 10px 40px 10px 40px; */
+    
     flex-wrap: wrap;
     height: 10vh;
     /* position: relative; */
@@ -257,7 +254,7 @@ div.search_box:hover{
     
 .navbar{
     width: 100vw;
-    background-color: #222222;
+    background-color: #db4141;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -274,7 +271,7 @@ div.search_box:hover{
 .heading{
     font-size: 1.5rem;
     text-align: center;
-    color: rgb(224, 30, 30);
+    color: rgb(228, 224, 224);
     /* margin: 5px 1px 2px 1px; */
     margin: 5px;
     /* margin-left: 4px; */
@@ -332,7 +329,7 @@ div.search_box:hover{
 }
 
 button.btn:hover{
-        background-color: red;
+        background-color: rgb(221, 214, 214);
         color: white;
         cursor: pointer;
  }

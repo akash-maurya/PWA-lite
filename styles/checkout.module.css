@@ -1,0 +1,26 @@
+.failed{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: red;
+    font-size: 2rem;
+    margin-top: 30vh;
+    margin-left: 30vw;
+}
+
+.order_placed{
+    color: rgb(47, 153, 73);
+    font-size: 2rem;
+    margin-top: 30vh;
+    margin-left: 30vw;
+}
+
+.btn{
+    width: 8rem;
+    height: 5vh;
+    border: 1px solid blue;
+    color: blue;
+    margin-left: 35vw;
+    margin-top: 2rem;
+    border-radius: 5px;
+}

@@ -1,7 +1,7 @@
 import CardItem from '../components/Card_item';
 import Link from 'next/link';
 import style from '../styles/Home.module.css';
-import Header from './header.js';
+import Header from './header';
 import items from '../components/items';
 import Head from 'next/head';
 import Login from './login';
@@ -31,16 +31,16 @@ const  Home = () =>{
       <Head>
         <script src="https://use.fontawesome.com/bff91f34a4.js"></script>
       </Head>
-
-      <Header />
-    
+      <div>
+        <Header />
+      </div>
       {showPopup && <AddPop></AddPop>}
-  
+
       <div className={style.grid_container}>
         {items.map((item) => {
           return (
             <CardItem
-              triggerPopup= {handSetPopup}
+              triggerPopup={handSetPopup}
               key={item.id}
               title={item.title}
               description={item.description}
@@ -50,8 +50,8 @@ const  Home = () =>{
           );
         })}
       </div>
-     
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }

@@ -2,9 +2,7 @@
 import style from '../../styles/cart.module.css';
 import Cookies from "universal-cookie";
 import axios from "axios";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash} from "@fortawesome/free-solid-svg-icons";
+import fallback from '../../components/fallback';
 import React , {useState , useEffect} from 'react';
 import Link from 'next/link';
 // import getcartItems from '../api/cartitems';
@@ -16,15 +14,15 @@ const Cart = (props)=>{
   const [items ,setItems] = useState([]);
   const [cost , settotalCost] = useState(0);
   const [numberOfitem ,setNumItems] = useState(0);
-
-
+  const [proceed , setProceed] = useState(false);
+  const [showfallback , setfallback] = useState(false); 
 async function getcartItems() {
   // const cookies = new Cookies();
 
   const authToken = cookies.get("authToken");
   const header = {
     "Content-Type": "application/json",
-    authToken: authToken,
+    "authToken": authToken,
   };
 
   const getUrl = "http://localhost:5000/api/Cart/getCartItems";
@@ -54,7 +52,36 @@ useEffect(() => {
  
 }, [])
 
+const handleCheckout = ()=>{
 
+const hitUrl = "http://localhost:5000/api/update/getdetails";
+const authToken = cookies.get("authToken");
+const header = {
+  "Content-Type": "application/json",
+  "authToken": authToken,
+};
+
+
+if (authToken) {
+  axios
+    .get(hitUrl, {
+      headers: header,
+    })
+    .then((response) => {
+      console.log(response.data);
+
+      if (response.data.success === true) {
+          if(response.data.address.length != 0){
+              setProceed(true);
+          }
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
+    
+}
 
 const Product = (props)=>{
 
@@ -85,7 +112,7 @@ const Product = (props)=>{
         </Link>
         <p> Your items are here ... Continue Shopping</p>
         <Link href="/checkout">
-          <button className={style.button}>Checkout</button>
+          <button  className={style.button}>Checkout</button>
         </Link>
       </div>
 
