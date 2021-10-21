@@ -71,8 +71,9 @@ if (authToken) {
 
 
    useEffect(()=>{
-      getdetails();
-   } )
+     getdetails();
+     //  eslint-disable-line react-hooks/exhaustive-deps
+   } , [])
 
 
 const handlelogout = ()=>{
