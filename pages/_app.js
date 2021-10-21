@@ -30,10 +30,10 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="manifest" href="/manifest.json" />
-       
+        <script src="/idb.js"></script>
+        <script src="/utility.js"></script>
       </Head>
-      <Script src = '/idb.js'></Script>
-      <Script src = '/utility.js'></Script>
+
       <Component {...pageProps} />
     </>
   );

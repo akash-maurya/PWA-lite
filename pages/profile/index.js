@@ -18,7 +18,7 @@ const cookies = new Cookies();
 const [firstname , setfirstname] = useState("");
 const [lastname , setlastname]   = useState("");
 const [address , setadress]      = useState("");
-
+const [showupdate , setUpdate]   = useState(false);
 const [mobileNumber , setmobileNumber] = useState(0);
 
 const handlefirstname = (event)=>{
@@ -161,7 +161,7 @@ const handleSubmit = (event)=>{
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
-          {/* <Script src = '/idb.js'></Script>
+        {/* <Script src = '/idb.js'></Script>
           <Script  src = '/utility.js'></Script> */}
 
         <div className={style.container}>
@@ -173,16 +173,15 @@ const handleSubmit = (event)=>{
           </div>
 
           <div className={style.image_section}>
-            <Image src={user} className={style.image} alt = "user Image"></Image>
+            <Image src={user} className={style.image} alt="user Image"></Image>
             <input
               type="file"
               encType="multipart/form-data"
               placeholder="upload your image"
-
             />
           </div>
 
-          <form autoComplete = "off" onSubmit={handleSubmit}>
+          <form autoComplete="off" onSubmit={handleSubmit}>
             <div className={style.text_container}>
               <div className={style.name}>
                 <div className={style.column_flex}>
@@ -191,7 +190,7 @@ const handleSubmit = (event)=>{
                     className={style.name_input}
                     name="firstname"
                     type="text"
-                    autoComplete = "false"
+                    autoComplete="false"
                     onChange={handlefirstname}
                     value={firstname}
                   />
@@ -203,7 +202,7 @@ const handleSubmit = (event)=>{
                     className={style.name_input}
                     name="lastname"
                     type="text"
-                    autoComplete = "false"
+                    autoComplete="false"
                     onChange={handlelastname}
                     value={lastname}
                   />
@@ -225,11 +224,12 @@ const handleSubmit = (event)=>{
                 onChange={handleadress}
                 name="address"
                 type="text"
-                autoComplete = "false"
+                autoComplete="false"
                 value={address}
               />
 
-              <button className={style.btn}> Submit </button>
+              {showupdate && <button className={style.btn}> Submit </button>}
+             { showupdate && <button disabled className={style.btn}> Profile updated </button>}
             </div>
           </form>
           <button onClick={handlelogout} className={style.btn_logout}>

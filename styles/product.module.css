@@ -26,13 +26,13 @@
 
 .text_container h2{
     color: rgb(12, 11, 11);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin: 0.5rem;
     /* color:rgb(15, 15, 15); */
 }
 
 .text_container p{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 0.5rem;
 }
 
@@ -47,6 +47,7 @@
 }
 .price{
     color: red;
+    font-size: .8rem;
     margin: auto;
 }
 .button{
@@ -125,7 +126,7 @@
     /* border-radius: 5px; */
     border-radius: 2px;
     cursor: pointer;
-    font-size: 0.5rem;
+     font-size:  1rem;
     margin-top: 0.5rem;
      margin-left: 0;
     border: 1px solid red;
