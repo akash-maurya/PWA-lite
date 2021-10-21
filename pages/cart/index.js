@@ -26,7 +26,7 @@ async function getcartItems() {
     "authToken": authToken,
   };
 
-  const getUrl = "http://localhost:5000/api/Cart/getCartItems";
+  const getUrl = "https://licious-lite.herokuapp.com/api/Cart/getCartItems";
   
   if (authToken) {
     await axios
@@ -50,14 +50,14 @@ async function getcartItems() {
   }
  
 }
+
 useEffect(() => {
   getcartItems();
- 
-}, [])
+})
 
 const handleCheckout = ()=>{
 
-const hitUrl = "http://localhost:5000/api/update/getdetails";
+const hitUrl = "https://licious-lite.herokuapp.com/api/update/getdetails";
 const authToken = cookies.get("authToken");
 const header = {
   "Content-Type": "application/json",
@@ -98,7 +98,7 @@ if (authToken) {
           </a>
         </Link>
         <p> Your items are here ... Continue Shopping</p>
-        <Link href="/checkout">
+        <Link href="/checkout" passHref>
           <button  className={style.button}>Checkout</button>
         </Link>
       </div>

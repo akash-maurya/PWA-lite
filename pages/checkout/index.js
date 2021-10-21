@@ -6,7 +6,7 @@ import style from '../../styles/checkout.module.css';
 import Fallback from '../../components/fallback';
 import Link from 'next/link';
 
-const checkout = ()=>{
+const Checkout = ()=>{
 
    const [proceed , setProceed ] = useState(false);
    const [items , setItems]  = useState([]);
@@ -16,7 +16,7 @@ const checkout = ()=>{
 
 
 const getOrderItems = async() => {
-  const hitUrl = "http://localhost:5000/api/Cart/getCartItems";
+  const hitUrl = "https://licious-lite.herokuapp.com/api/Cart/getCartItems";
   const authToken = cookies.get("authToken");
   const header = {
     "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const getOrderItems = async() => {
 
 
 const updateAddprensent = async()=>{  
-  const hitUrl = "http://localhost:5000/api/update/getdetails";
+  const hitUrl = "https://licious-lite.herokuapp.com/api/update/getdetails";
   const authToken = cookies.get("authToken");
   const header = {
   "Content-Type": "application/json",
@@ -81,7 +81,7 @@ if (authToken) {
 
 useEffect(() => {
  updateAddprensent();
-}, []);
+});
 
 
 const ItemBox = (props)=>{
@@ -115,7 +115,7 @@ const ItemBox = (props)=>{
             
 
            {!showfallback && !proceed &&< div className = {style.fail_container}><p className = {style.failed}> Please fill your address , failed to place the order</p></div>  }         
-            {!showfallback && <Link href = '/cart'>
+            {!showfallback && <Link href = '/cart' passHref>
                <button className = {style.btn}>Back to cart</button>
             </Link>}
             {showfallback && <Fallback/>}
@@ -123,4 +123,4 @@ const ItemBox = (props)=>{
 
 
 }
-export default checkout;
+export default Checkout;

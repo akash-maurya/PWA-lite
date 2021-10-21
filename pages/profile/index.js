@@ -1,4 +1,5 @@
 import style from '../../styles/profile.module.css'
+
 import Head from 'next/head'
 import Link from 'next/link'
 import user from '../../public/user.jpeg';
@@ -7,8 +8,9 @@ import { useState , useEffect} from 'react';
 import Cookies from "universal-cookie";
 import axios from "axios";
 import Router from 'next/router';
+import Script from 'next/script';
 
-const profile = ()=>{
+const Profile = ()=>{
 
 const cookies = new Cookies();
 
@@ -34,7 +36,7 @@ const handleadress = (event) => {
 
 async function getdetails (){
 
-const hitUrl = "http://localhost:5000/api/update/getdetails";
+const hitUrl = "https://licious-lite.herokuapp.com/api/update/getdetails";
 const authToken = cookies.get("authToken");
 const header = {
   "Content-Type": "application/json",
@@ -70,7 +72,7 @@ if (authToken) {
 
    useEffect(()=>{
       getdetails();
-   } , [])
+   } )
 
 
 const handlelogout = ()=>{
@@ -85,7 +87,8 @@ async function updateProfile(fname , lname , userAddress){
       lastname : lname ,
       address : userAddress
   }
-   const hitUrl = "http://localhost:5000/api/update/updateDetails";
+   const hitUrl =
+     "https://licious-lite.herokuapp.com/api/update/updateDetails";
   const authToken = cookies.get("authToken");
   const header = {
     "Content-Type": "application/json",
@@ -157,6 +160,9 @@ const handleSubmit = (event)=>{
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
+          <Script src = '/idb.js'></Script>
+          <Script  src = '/utility.js'></Script>
+
         <div className={style.container}>
           <div className={style.update_box}>
             <Link href="/">
@@ -166,11 +172,11 @@ const handleSubmit = (event)=>{
           </div>
 
           <div className={style.image_section}>
-            <Image src={user} className={style.image}></Image>
+            <Image src={user} className={style.image} alt = "user Image"></Image>
             <input
               type="file"
               encType="multipart/form-data"
-              placeholder ='upload your image'
+              placeholder="upload your image"
             />
           </div>
 
@@ -184,7 +190,7 @@ const handleSubmit = (event)=>{
                     name="firstname"
                     type="text"
                     onChange={handlefirstname}
-                    value = {firstname}
+                    value={firstname}
                   />
                 </div>
 
@@ -195,7 +201,7 @@ const handleSubmit = (event)=>{
                     name="lastname"
                     type="text"
                     onChange={handlelastname}
-                    value ={lastname}
+                    value={lastname}
                   />
                 </div>
               </div>
@@ -206,7 +212,7 @@ const handleSubmit = (event)=>{
                 disabled
                 name="phoneNumber"
                 type="tel"
-                value = {mobileNumber}
+                value={mobileNumber}
               />
 
               <label className={style.label}>Address</label>
@@ -215,13 +221,15 @@ const handleSubmit = (event)=>{
                 onChange={handleadress}
                 name="address"
                 type="text"
-                value = {address}
+                value={address}
               />
 
               <button className={style.btn}> Submit </button>
             </div>
           </form>
-          <button onClick = {handlelogout} className={style.btn_logout}>LOGOUT</button>
+          <button onClick={handlelogout} className={style.btn_logout}>
+            LOGOUT
+          </button>
         </div>
       </>
     );
@@ -229,4 +237,4 @@ const handleSubmit = (event)=>{
 }
 
 
-export default profile ;
+export default Profile ;

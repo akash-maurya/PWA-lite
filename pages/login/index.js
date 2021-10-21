@@ -1,7 +1,7 @@
 import style from "../../styles/login.module.css";
 import Image from "next/image";
 import logo from "../../public/Licious-Logo.png";
-import Link from 'next/link';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes} from "@fortawesome/free-solid-svg-icons";
 
@@ -9,7 +9,8 @@ import axios  from "axios";
 import React , {useState} from "react";
 import Cookies from 'universal-cookie';
 
-const login = (props) => {
+const Login = (props) => {
+
   const cookies = new Cookies();
   const [showOTPbox , setOTPbox]  = useState(false);
   const [phonenumber , setPhoneNumber] = useState(0);
@@ -31,7 +32,7 @@ const login = (props) => {
         console.log("Fetch fun");
         await axios
           .post(
-            `http://localhost:5000/api/auth/login/sendOTP`,
+            `https://licious-lite.herokuapp.com/api/auth/login/sendOTP`,
             data,
             {
               headers: headerVal,
@@ -52,7 +53,7 @@ const login = (props) => {
     let resp = "";
     // axios.defaults.withCredentials = true;
 
-   const url = "http://localhost:5000/api/auth/login/verify";
+   const url = "https://licious-lite.herokuapp.com/api/auth/login/verify";
     await axios.post(url , data)
     .then((result)=>{
         // console.log(result);
@@ -177,7 +178,7 @@ const login = (props) => {
 
               {showInvalidOTP && <button disabled id = {style.invalid}>Invalid OTP</button>}
 
-              {showNetworkError && <button disabled id = {style.invalid}>Please connect to Internet, Can't login</button>}
+              {showNetworkError && <button disabled id = {style.invalid}>Please connect to Internet, Can not login</button>}
 
               { showOTPbox && <button  disabled id = {style.specialButton}>OTP has been sent successfully</button>}
 
@@ -197,4 +198,4 @@ const login = (props) => {
   );
 };
 
-export default login;
+export default Login;

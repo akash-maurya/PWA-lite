@@ -20,7 +20,7 @@ const [showfallback , setfallback] = useState(false);
 const cookies = new Cookies();
 
 
-const checklogin = ()=>{
+const CheckUserLogin= ()=>{
 
   const authToken = cookies.get('authToken');
   if(!authToken){
@@ -50,9 +50,9 @@ const handlefallback =()=>{
 }
 
 useEffect(() => {
- checklogin();
- 
-}, [showlogin ,CheckLogin]);
+  CheckUserLogin();
+  //  eslint-disable-line react-hooks/exhaustive-deps
+}, [showlogin , CheckLogin ]);
 
   return (
     <>
@@ -79,7 +79,7 @@ useEffect(() => {
           {/* Login Buuton to login the user  */}
           <div className={style.flex_box}>
             {!CheckLogin && (
-              <Link href="/auth">
+              <Link href="/auth" passHref>
                 <button onClick={handleclick} className={style.btn}>
                   Login
                 </button>
@@ -88,7 +88,7 @@ useEffect(() => {
 
             {/* Profile Button which will be visible if user logged in */}
             {CheckLogin && (
-              <Link href="/profile">
+              <Link href="/profile" passHref>
                 <button className={style.btn}>
                   <span>Profile</span>
                 </button>
@@ -96,7 +96,7 @@ useEffect(() => {
             )}
 
             {/* Cart buttton */}
-            <Link href="/cart" >
+            <Link href="/cart" passHref>
               <button className = {style.btn}><span>Cart</span></button>
             </Link>
           </div>

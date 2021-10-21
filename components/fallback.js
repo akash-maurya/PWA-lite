@@ -9,7 +9,7 @@ const fallback  = ()=>{
       <>
        <div className = {style.fallback_container}>
         <div className={style.nonetwork}>
-          <Image src={nonetwork}></Image>
+          <Image src={nonetwork} alt = "nenetwork image"></Image>
         </div>
 
         <div className={style.content}>
@@ -23,7 +23,7 @@ const fallback  = ()=>{
             </p>
           </div>
 
-          <Link href="/">
+          <Link href="/" passHref>
             <button className={style.refresh}>Refresh</button>
           </Link>
         </div>

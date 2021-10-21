@@ -13,7 +13,7 @@ const item_bar = (props) => {
 const cookies = new Cookies();
 
   const handleDelete = () => {
-    const hitUrl = `http://localhost:5000/api/Cart/deleteItem`;
+    const hitUrl = `https://licious-lite.herokuapp.com/api/Cart/deleteItem`;
     const authToken = cookies.get("authToken");
     const header = {
       "Content-Type": "application/json",

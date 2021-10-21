@@ -148,7 +148,7 @@ self.addEventListener("sync", function (event) {
           };
           console.log(data);
           const hitUrl =
-            "http://localhost:5000/api/update/updateDetails";
+            "https://licious-lite.herokuapp.com/api/update/updateDetails";
           // const authToken = cookies.get("authToken");
           const header = {
             "Content-Type": "application/json",

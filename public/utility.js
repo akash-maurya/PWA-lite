@@ -1,3 +1,4 @@
+
 var dbPromise = idb.open("profile-store", 1, function (db) {
 if(!db.objectStoreNames.contains('profile')){
      db.createObjectStore("profile", { keyPath: "authToken" });

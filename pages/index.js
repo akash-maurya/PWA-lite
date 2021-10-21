@@ -1,10 +1,10 @@
 import CardItem from '../components/Card_item';
-import Link from 'next/link';
+import Script from 'next/script';
 import style from '../styles/Home.module.css';
 import Header from './header';
 import items from '../components/items';
 import Head from 'next/head';
-import Login from './login';
+
 import Footer from '../components/footer';
 import React , {useState} from 'react';
 import AddPop from '../components/addpopup';
@@ -28,10 +28,9 @@ const  Home = () =>{
 
   return (
     <div>
-      <Head>
-        <script src="https://use.fontawesome.com/bff91f34a4.js"></script>
-      </Head>
       <div>
+        <Script src="https://use.fontawesome.com/bff91f34a4.js"></Script>
+
         <Header />
       </div>
       {showPopup && <AddPop></AddPop>}
