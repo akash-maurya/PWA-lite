@@ -29,16 +29,21 @@ const login = (props) => {
           "Content-Type" : "application/json"
         }
         console.log("Fetch fun");
-        await axios.post(`http://localhost:5000/api/auth/login/sendOTP`,data , {
-          headers : headerVal ,
-        })
-        .then((result) =>{
-           console.log(result);
-           resp = result ;
-        })
-        .catch(error=>{
-          console.log(error);
-        });
+        await axios
+          .post(
+            `http://localhost:5000/api/auth/login/sendOTP`,
+            data,
+            {
+              headers: headerVal,
+            }
+          )
+          .then((result) => {
+            console.log(result);
+            resp = result;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
         return resp;
   }
 
@@ -76,7 +81,7 @@ const login = (props) => {
             }
           else
           {
-            props.fallback_handle();
+            // props.fallback_handle();
             setNetworkError(false);
              setOTPbox(true);
              setInvalid(false);
@@ -172,7 +177,7 @@ const login = (props) => {
 
               {showInvalidOTP && <button disabled id = {style.invalid}>Invalid OTP</button>}
 
-              {showNetworkError && <button disabled id = {style.invalid}>Weak Network connection, Can't login</button>}
+              {showNetworkError && <button disabled id = {style.invalid}>Please connect to Internet, Can't login</button>}
 
               { showOTPbox && <button  disabled id = {style.specialButton}>OTP has been sent successfully</button>}
 

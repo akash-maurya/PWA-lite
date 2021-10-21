@@ -2,9 +2,10 @@
 import style from '../../styles/cart.module.css';
 import Cookies from "universal-cookie";
 import axios from "axios";
-import fallback from '../../components/fallback';
+import ItemBar from '../../components/itemBar';
 import React , {useState , useEffect} from 'react';
 import Link from 'next/link';
+import Fallback from '../../components/fallback';
 // import getcartItems from '../api/cartitems';
 
 const Cart = (props)=>{
@@ -15,7 +16,7 @@ const Cart = (props)=>{
   const [cost , settotalCost] = useState(0);
   const [numberOfitem ,setNumItems] = useState(0);
   const [proceed , setProceed] = useState(false);
-  const [showfallback , setfallback] = useState(false); 
+  const [nonetwork ,setnonetwork] = useState(false);
 async function getcartItems() {
   // const cookies = new Cookies();
 
@@ -39,9 +40,11 @@ async function getcartItems() {
           count = count + data[i].amount;
         }
         settotalCost(count);
+        
         setNumItems(data.length);
       })
       .catch((err) => {
+        setnonetwork(true);
         console.log(err);
       });
   }
@@ -83,23 +86,7 @@ if (authToken) {
     
 }
 
-const Product = (props)=>{
 
- 
-          return (
-            <>
-              <div className={style.product_container}>
-                <h2>
-                  <span>Item</span> : {props.name}
-                </h2>
-                <p>
-                  <span>Amount </span>: {props.amount}Rs
-                </p>
-               
-              </div>
-            </>
-          );
-}
 
 //------------------------------ Cart JSX ---------------------------------
   return (
@@ -131,16 +118,19 @@ const Product = (props)=>{
       <div className={style.pricingAndcount}></div>
       <div className={style.item_container}>
         {items.map((item) => {
+          // console.log(item._id);
           return (
-            <Product
+            <ItemBar
               key={item._id}
               itemId={item._id}
               name={item.name}
               amount={item.amount}
+              refresh = {getcartItems}
             />
           );
         })}
       </div>
+      {nonetwork && <Fallback/>}
     </>
   );
 }

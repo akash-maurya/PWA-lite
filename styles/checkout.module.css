@@ -13,8 +13,21 @@
     font-size: 2rem;
     margin-top: 30vh;
     margin-left: 30vw;
+    margin-bottom: 2rem;
 }
 
+.item_container{
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid blue;
+    margin: 5px;
+    border-radius: 4px;
+}
+.item_heading{
+     margin: 7px;
+    font-size: 1rem;
+    color: blue;
+}
 .btn{
     width: 8rem;
     height: 5vh;
@@ -23,4 +36,70 @@
     margin-left: 35vw;
     margin-top: 2rem;
     border-radius: 5px;
+}
+
+.grid_container{
+    width: 70vw;
+    margin-top: 2rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6 ,1fr);
+    grid-row-gap :5px
+}
+
+@media screen  and (max-width: 550px ){
+
+    .order_placed{
+    color: rgb(47, 153, 73);
+    font-size: 1.3rem;
+    margin-top: 30vh;
+    margin-left: 20vw;
+    margin-bottom: 2rem;
+}
+   .item_container{
+    width: 7rem;
+    height: 2rem;
+    border: 1px solid blue;
+    margin: 5px;
+    border-radius: 4px;
+}
+    .item_heading{
+     margin: 7px;
+    font-size: 0.8rem;
+    color: blue;
+ }
+
+    .grid_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media screen  and (min-width: 551px ) and (max-width:800px){
+
+    .order_placed{
+    color: rgb(47, 153, 73);
+    font-size: 1.5rem;
+    margin-top: 30vh;
+    margin-left: 20vw;
+    margin-bottom: 2rem;
+}
+   .item_container{
+    width: 7rem;
+    height: 2rem;
+    border: 1px solid blue;
+    margin: 5px;
+    border-radius: 4px;
+}
+.item_heading{
+     margin: 7px;
+    font-size: 0.8rem;
+    color: blue;
+ }
+
+    .grid_container{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+
 }

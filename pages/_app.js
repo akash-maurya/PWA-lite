@@ -7,25 +7,30 @@ config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
 
-   useEffect(() => {
-     console.log("hello");
-     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-        .then(()=>{
-          console.log("service worker are registered!!");
-        })
-        .catch((error)=>{
-          console.log(error);
-        })
-     }
-   }, []);
+
+  useEffect(() => {
+   
+    if('serviceWorker' in navigator){
+       navigator.serviceWorker.register("/sw.js")
+       .then(function(registration){
+         console.log("service worker registration successful with scope "+ registration.scope);
+       }
+       ,
+       function(err){
+         console.log("Failed to register service worker" , err) ;
+       }
+       
+       )
+       
+    }
+  }, [])
 
   return (
     <>
       <Head>
-        <link rel="manifest" href="/manifest.json" />
-        <script src = "/idb.js"></script>
-        <script src = "/utility.js"></script>
+      <link rel="manifest" href="/manifest.json" />
+         <script src = "/idb.js"></script>
+        <script src = "/utility.js"></script> 
       </Head>
       <Component {...pageProps} />
     </>

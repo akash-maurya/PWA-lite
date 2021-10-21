@@ -22,7 +22,8 @@ const addItem = async (event)=>{
     if(authToken){
         const data = {name : props.title , amount : props.price};
         console.log(data);
-        const addUrl = "http://localhost:5000/api/Cart/updateOrder";
+        const addUrl =
+          "http://localhost:5000/api/Cart/updateOrder";
        await axios.post(addUrl , data  , {headers : header})
         .then((res)=>{
             console.log(res.data);

@@ -32,7 +32,7 @@ const handleadress = (event) => {
 };
 
 
-function getdetails (){
+async function getdetails (){
 
 const hitUrl = "http://localhost:5000/api/update/getdetails";
 const authToken = cookies.get("authToken");
@@ -43,7 +43,7 @@ const header = {
 };
 
 if (authToken) {
-  axios
+  await axios
     .get(hitUrl, {
       headers: header,
     })
@@ -93,7 +93,7 @@ async function updateProfile(fname , lname , userAddress){
   };
 
 if(authToken){
-  axios.put(hitUrl , data , {
+  await axios.put(hitUrl , data , {
     headers : header
   })
   .then((response)=>{

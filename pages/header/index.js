@@ -1,14 +1,13 @@
 import style from "../../styles/header.module.css";
-import Image from "next/image";
-import logo from "../../public/Licious-Logo.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Login from "../login";
 import React , {useState, useEffect} from 'react';
 import Cart from '../cart';
 import Cookies from "universal-cookie";
-import fallback from "../../components/fallback";
+
 
 
 
@@ -19,7 +18,7 @@ const [CheckLogin , setCheckLogin]  = useState(false);
 const [showCart , setShowCart] = useState(false);
 const [showfallback , setfallback] = useState(false);
 const cookies = new Cookies();
-// check whether someone login or not ;
+
 
 const checklogin = ()=>{
 

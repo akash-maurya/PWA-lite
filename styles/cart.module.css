@@ -69,8 +69,12 @@
 }
 .delete{
     border :none ;
+    background :none;
     cursor: pointer;
-    margin:auto
+    margin:auto ;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(12, 43, 129);
 }
 .countAndPricing {
   margin: 1.5rem;
@@ -138,6 +142,15 @@
     font-weight:lighter;
 }
 
+.delete{
+    border :none ;
+    cursor: pointer;
+    background: none;
+    margin:auto ;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: rgb(12, 43, 129);
+}
 .item_container{
     width: 80vw;
     margin: auto;
@@ -154,12 +167,12 @@
 }
 
 .product_container h2{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: bold;
     margin: auto;
 }
 .product_container p{
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: bold;
     margin: auto;
 }
@@ -201,6 +214,16 @@
 .countAndPricing p{
     font-size: 1.4rem;
     font-weight:lighter;
+}
+
+.delete{
+    border :none ;
+    cursor: pointer;
+    background: none;
+    margin:auto ;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(12, 43, 129);
 }
 
 .item_container{

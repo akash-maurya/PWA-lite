@@ -9,30 +9,66 @@ import Link from 'next/link';
 const checkout = ()=>{
 
    const [proceed , setProceed ] = useState(false);
+   const [items , setItems]  = useState([]);
    const [showfallback , setfallback] =useState(false);
    const cookies = new Cookies();
 
-const updateAddprensent = ()=>{  
-const hitUrl = "http://localhost:5000/api/update/getdetails";
-const authToken = cookies.get("authToken");
-const header = {
-  "Content-Type": "application/json",
-  "authToken": authToken,
+
+
+const getOrderItems = async() => {
+  const hitUrl = "http://localhost:5000/api/Cart/getCartItems";
+  const authToken = cookies.get("authToken");
+  const header = {
+    "Content-Type": "application/json",
+    "authToken": authToken,
+  };
+
+  if (authToken) {
+    await axios
+      .get(hitUrl, {
+        headers: header,
+      })
+      .then((response) => {
+        
+        console.log(response.data);
+
+        
+          setItems(response.data);
+         
+       
+      })
+      .catch((err) => {
+        setfallback(true);
+        console.log(err);
+      });
+  }
 };
 
+
+const updateAddprensent = async()=>{  
+  const hitUrl = "http://localhost:5000/api/update/getdetails";
+  const authToken = cookies.get("authToken");
+  const header = {
+  "Content-Type": "application/json",
+  "authToken": authToken,
+  };
+
+
+
 if (authToken) {
-  axios
+  await axios
     .get(hitUrl, {
       headers: header,
     })
     .then((response) => {
-      console.log(response.data);
-
+      // console.log(response.data);
+      
       if (response.data.success === true) {
         console.log("------");
-        console.log(response.data.address);
-        if (response.data.data.address.length != 0) {
+        // console.log(response.data.data.address);
+        if (response.data.data.address.length !== 0) {
           setProceed(true);
+          getOrderItems();
         }
       }
     })
@@ -44,14 +80,39 @@ if (authToken) {
 }
 
 useEffect(() => {
-  
  updateAddprensent();
 }, []);
+
+
+const ItemBox = (props)=>{
+
+  return <>
+          <div className = {style.item_container}>
+            <h1 className = {style.item_heading}>
+              {props.name}
+            </h1>
+          </div>
+    </>
+}
+
 
     return (<>
 
             {!showfallback && proceed && <div className = {style.success_container}><p className = {style.order_placed}> Your order has been placed successfully</p></div>}
-
+            
+               <div className = {style.grid_container}>
+                 {
+                   
+                   items.map((item)=>{
+                     console.log(item);
+                     return (<ItemBox 
+                      key = {item._id}
+                       name = {item.name}
+                     />);
+                   })
+                 }
+               </div>
+            
 
            {!showfallback && !proceed &&< div className = {style.fail_container}><p className = {style.failed}> Please fill your address , failed to place the order</p></div>  }         
             {!showfallback && <Link href = '/cart'>
