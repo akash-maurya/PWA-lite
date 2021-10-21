@@ -160,8 +160,8 @@ const handleSubmit = (event)=>{
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
-          <Script src = '/idb.js'></Script>
-          <Script  src = '/utility.js'></Script>
+          {/* <Script src = '/idb.js'></Script>
+          <Script  src = '/utility.js'></Script> */}
 
         <div className={style.container}>
           <div className={style.update_box}>
@@ -177,10 +177,11 @@ const handleSubmit = (event)=>{
               type="file"
               encType="multipart/form-data"
               placeholder="upload your image"
+
             />
           </div>
 
-          <form onSubmit={handleSubmit}>
+          <form autoComplete = "off" onSubmit={handleSubmit}>
             <div className={style.text_container}>
               <div className={style.name}>
                 <div className={style.column_flex}>
@@ -189,6 +190,7 @@ const handleSubmit = (event)=>{
                     className={style.name_input}
                     name="firstname"
                     type="text"
+                    autoComplete = "false"
                     onChange={handlefirstname}
                     value={firstname}
                   />
@@ -200,6 +202,7 @@ const handleSubmit = (event)=>{
                     className={style.name_input}
                     name="lastname"
                     type="text"
+                    autoComplete = "false"
                     onChange={handlelastname}
                     value={lastname}
                   />
@@ -221,6 +224,7 @@ const handleSubmit = (event)=>{
                 onChange={handleadress}
                 name="address"
                 type="text"
+                autoComplete = "false"
                 value={address}
               />
 
