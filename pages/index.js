@@ -2,16 +2,46 @@ import CardItem from '../components/Card_item';
 import Script from 'next/script';
 import style from '../styles/Home.module.css';
 import Header from './header';
-import items from '../components/items';
+//import items from '../components/items';
 import Head from 'next/head';
 
 import Footer from '../components/footer';
-import React , {useState} from 'react';
+import React , {useEffect, useState} from 'react';
 import AddPop from '../components/addpopup';
 
 const  Home = () =>{
 
+  const [Items,setItems] = useState([]);
+
  const [showPopup , setPopup] = useState(false);
+
+ useEffect(()=>{
+getItems()
+ },[]);
+
+ async function getItems(){
+  await fetch("http://localhost:5000/api/items/getItems",{
+    method : "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+  }).then((res)=>{
+    return res.json();
+  }).then((item)=>{
+    const ItemsArray = item.map((itemdata) => {
+      return {
+        itemId: itemdata.itemId,
+        title : itemdata.title,
+        description : itemdata.description,
+        price : itemdata.price,
+        weight : itemdata.weight,
+        image  : itemdata.image
+      };
+    });
+    setItems(ItemsArray);
+  })
+ }
 
  const handSetPopup = (event)=>{
     event.preventDefault();
@@ -36,15 +66,16 @@ const  Home = () =>{
       {showPopup && <AddPop></AddPop>}
 
       <div className={style.grid_container}>
-        {items.map((item) => {
+        {Items.map((item) => {
           return (
             <CardItem
               triggerPopup={handSetPopup}
-              key={item.id}
+              key={item.itemId}
               title={item.title}
               description={item.description}
               image={item.image}
               price={item.price}
+              weight={item.weight}
             />
           );
         })}

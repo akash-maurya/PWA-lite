@@ -49,6 +49,7 @@ const addItem = async (event)=>{
 
             <div className={style.priceAndbutton}>
               <h3 className={style.price}>MRP : {props.price} Rs</h3>
+              <h3 className={style.price}>{props.weight}gms</h3>
               <a>
                 <button  onClick = {addItem} className = {style.button}>Add to Cart</button>
               </a>
