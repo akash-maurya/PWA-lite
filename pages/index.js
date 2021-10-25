@@ -17,10 +17,11 @@ const  Home = () =>{
 
  useEffect(()=>{
 getItems()
+ //  eslint-disable-line react-hooks/exhaustive-deps
  },[]);
 
  async function getItems(){
-  await fetch("http://localhost:5000/api/items/getItems",{
+  await fetch("https://licious-lite.herokuapp.com/api/items/getItems",{
     method : "GET",
     headers: {
       "Content-Type": "application/json",
