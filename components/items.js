@@ -1,11 +1,11 @@
-import MeatM from '../public/MeatM.jpeg';
-import ChickenB from '../public/ChickenB.jpeg';
-import Eggs from '../public/Eggs.jpeg';
+import MeatM from "../public/MeatM.jpeg";
+import ChickenB from "../public/ChickenB.jpeg";
+import Eggs from "../public/Eggs.jpeg";
 
 const items = [
   {
     id: 1,
-    title: "Goat Meat" ,
+    title: "Goat Meat",
     description:
       "It is very hygenic and tasty meat jksfsjhafsdh fjdsfjhfsadhfsdjk ffhf safdsf hsfsdhaf ",
     price: 199,
@@ -90,4 +90,4 @@ const items = [
   },
 ];
 
-export default items ;
+export default items;
