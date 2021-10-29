@@ -3,15 +3,16 @@ PWA LITE is a PWA version of food ordering app. PWA is web Application which can
 
 This [PWA](https://developers.google.com/web/updates/2015/12/getting-started-pwa) project is built using [Next.js](https://nextjs.org/) for frontend and [Node.js](https://nodejs.org) for backend. Deployed on Vercel. This repo is only for frontend, you can find backend [here](https://github.com/akash-maurya/pwa-Backend).
 
+## Contents
 1. [PWA LITE demo](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#pwa-lite-demo)
 1. [Features](#Features)
    1. [`Installation`](#Installation)
-   1. [`Login Page`](#LoginPage)
-   1. [`Home Page`](#HomePage)
-   1. [`Profile Page`](#ProfilePage)
+   1. [`Login Page`](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#login-page)
+   1. [`Home Page`](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#home-page)
+   1. [`Profile Page`](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#profile-page)
    1. [`Cart`](#Cart)
-1. [`Start with Code`](#Getting Started)
-1. [`References`](#References)
+1. [`Start with Code`](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#getting-started)
+1. [`References`](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#references)
 
 ## PWA LITE demo
 This the [demo](https://licious-lite-ncvl.vercel.app/) of working pwa-lite. pwa is frontend deployed on [vercel](https://vercel.com/) and backend on [heroku](https://www.heroku.com/). this app has all features of PWA.i.e, Installable, Responsive, Offline caching, Background Sync.
