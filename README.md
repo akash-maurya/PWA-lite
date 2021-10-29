@@ -6,15 +6,15 @@ This [PWA](https://developers.google.com/web/updates/2015/12/getting-started-pwa
 1. [PWA LITE demo](#PWA LITE demo)
 1. [Features](#Features)
    1. [`Installation`](#Installation)
-   1. [`Login Page`](#Login Page)
-   1. [`Home Page`](#Home Page)
-   1. [`Profile Page`](#Profile Page)
+   1. [`Login Page`](#LoginPage)
+   1. [`Home Page`](#HomePage)
+   1. [`Profile Page`](#ProfilePage)
    1. [`Cart`](#Cart)
 1. [`Start with Code`](#Getting Started)
 1. [`References`](#References)
 
 ## PWA LITE demo
-This the [demo](https://licious-lite.vercel.app/) of working pwa-lite. pwa is frontend deployed on [vercel](https://vercel.com/) and backend on [heroku](https://www.heroku.com/). this app has all features of PWA.i.e, Installable, Responsive, Offline caching, Background Sync.
+This the [demo](https://licious-lite-ncvl.vercel.app/) of working pwa-lite. pwa is frontend deployed on [vercel](https://vercel.com/) and backend on [heroku](https://www.heroku.com/). this app has all features of PWA.i.e, Installable, Responsive, Offline caching, Background Sync.
 ## Features
 
 # Installation
