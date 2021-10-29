@@ -4,8 +4,8 @@ PWA LITE is a PWA version of food ordering app. PWA is web Application which can
 This [PWA](https://developers.google.com/web/updates/2015/12/getting-started-pwa) project is built using [Next.js](https://nextjs.org/) for frontend and [Node.js](https://nodejs.org) for backend. Deployed on Vercel. This repo is only for frontend, you can find backend [here](https://github.com/akash-maurya/pwa-Backend).
 
 ## Contents
-1. [PWA LITE demo](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#pwa-lite-demo)
-1. [Features](#Features)
+1. [`PWA LITE demo`](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#pwa-lite-demo)
+1. [`Features`](#Features)
    1. [`Installation`](#Installation)
    1. [`Login Page`](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#login-page)
    1. [`Home Page`](https://github.com/akash-maurya/PWA-lite/blob/chandrateja/README.md#home-page)
