@@ -39,15 +39,20 @@ const cookies = new Cookies();
 
   return (
     <>
-      <div className={style.product_container}>
-        <h2>
-          <span>Item</span> : {props.name} 
-        </h2>
-        <p>
-          <span>Amount </span>: {props.amount}Rs
-        </p>
-        <button className = {style.delete} onClick={handleDelete}>Delete</button>
+      <div className="justify-content-between">
+      <div className="d-flex flex-row bd-highlight">
+        <div className="p-2 flex-grow-1 bd-highlight text-start">
+          <h5>{props.name}</h5>
+          <h6>
+            <span>₹ </span>: {props.amount}Rs
+          </h6>
+
+        </div>
+        <div className="p-2 bd-highlight">
+          <button className={style.delete}>Delete</button>
+        </div>
       </div>
+    </div>
     </>
   );
 };

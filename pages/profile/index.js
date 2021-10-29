@@ -9,6 +9,7 @@ import Cookies from "universal-cookie";
 import axios from "axios";
 import Router from "next/router";
 import Script from "next/script";
+import "bootstrap/dist/css/bootstrap.css";
 
 const Profile = () => {
   const cookies = new Cookies();
@@ -262,8 +263,8 @@ const Profile = () => {
             <style jsx>{`
               #submitbtn {
                 background: ${Isvalid == false
-                  ? "#e41d36"
-                  : "rgba(248, 8, 8, 1)"};
+                  ? "rgba(248, 8, 8, 1)"
+                  : "#e41d36"};
                 pointer-events: ${Isvalid == true && "none"};
               }
             `}</style>
